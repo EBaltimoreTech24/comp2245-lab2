@@ -10,4 +10,4 @@ This is Lab 2 for Ennmore Baltimore.
 
 ## Image credits
 
-All images in the `images` folder (`profile.svg`, `laptop.svg`, `landscape.svg`) are taken and used from browsing on google in the images section.
+All images in the `images` folder are taken and used from browsing on google in the images section.
