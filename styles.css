@@ -1,0 +1,173 @@
+/* Base */
+body {
+  margin: 0;
+  padding: 40px 20px;
+  background-color: #EDF2F7;
+  color: #2D3748;
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+/* Page layout: Grid */
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
+
+header,
+footer {
+  grid-column: 1 / -1;
+}
+
+main {
+  grid-column: 1;
+  padding: 30px 0 30px 40px;
+}
+
+aside {
+  grid-column: 2;
+  padding: 30px 40px 30px 0;
+}
+
+/* Header: Flexbox */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #2C5282;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+header h1 {
+  margin: 20px 0 10px;
+  font-size: 36px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.statement {
+  margin: 0;
+}
+
+.profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Blog posts */
+article {
+  display: flow-root; /* keeps floated images inside their own article */
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+article:not(:last-child) {
+  border-bottom: 1px solid #CBD5E0;
+}
+
+article:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+article h2 {
+  margin: 0 0 5px;
+  font-size: 32px;
+  color: #276749;
+}
+
+.meta {
+  margin: 0 0 20px;
+  color: #4A5568;
+}
+
+article p {
+  margin: 0 0 16px;
+}
+
+article img {
+  height: auto;
+  width: 260px;
+  max-width: 100%;
+}
+
+.float-left {
+  float: left;
+  margin: 5px 24px 12px 0;
+}
+
+.float-right {
+  float: right;
+  margin: 5px 0 12px 24px;
+}
+
+/* Sidebar */
+aside h3 {
+  margin: 0 0 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+aside section {
+  margin-bottom: 30px;
+}
+
+aside ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.about {
+  padding: 20px;
+  background-color: #E2E8F0;
+}
+
+.about h3 {
+  color: #000000;
+}
+
+.about p {
+  margin: 0;
+}
+
+aside section:not(.about) h3 {
+  color: #276749;
+}
+
+aside a {
+  color: #2B6CB0;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background-color: #2C5282;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Optional: stack main content and sidebar on narrow screens */
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  main,
+  aside {
+    grid-column: 1;
+    padding: 30px 20px;
+  }
+}
